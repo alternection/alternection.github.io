@@ -1,0 +1,193 @@
+:root {
+    --background-color: #080808;
+    --highlight-color: #ff004f;
+    --main-color: #ffffff;
+    --second-color: #ababab;
+    --third-color: #32CD32;
+    --fourth-color: #661B1C;
+    --background-color-2: #262626;
+    --fifth-color: #717171;
+    --background-color-3: #111111;
+}
+.container {
+    margin: 20px 10%;
+}
+.logo {
+    margin-top: 5px;
+    width: 90px;
+}
+.link {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: .2s ease-in-out;
+}
+.link:hover {
+    color: var(--highlight-color);
+}
+.heading {
+    color: var(--highlight-color);
+    font-size: 60px;
+    letter-spacing: 2pt;
+}
+.subheading {
+    color: var(--second-color);
+    opacity: 70%;
+    font-size: 28px;
+    letter-spacing: 2pt;
+}
+.description {
+    color: var(--main-color);
+    font-size: large;
+}
+.title {
+    color: var(--main-color);
+    font-size: x-large;
+    letter-spacing: 1pt;
+}
+.subtitle {
+    color: var(--second-color);
+    font-size: 12pt;
+}
+.tree-root {
+    padding: 1rem, 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    position: relative;
+    font-size: large;
+    line-height: 2rem;
+}
+.tree-nested {
+    margin-top: 2rem;
+    margin-left: 3.4rem;
+    list-style: none;
+    color: var(--main-color);
+    position: relative;
+}
+.element {
+    position: relative;
+}
+.tree-nested.element,
+.tree-root span,
+.tree-nested span {
+    color: var(--third-color);
+    font-size: x-large;
+}
+.tree-nested .element::before {
+    position: absolute;
+    left: -2rem;
+    top: -2rem;
+    border-left: 2px solid var(--third-color);
+    border-bottom: 2px solid var(--third-color);
+    content: '';
+    width: 1.7rem;
+    height: 3rem;
+}
+.tree-nested .element::after {
+    position: absolute;
+    left: -2rem;
+    bottom: -0.8rem;
+    border-left: 2px solid var(--third-color);
+    content: '';
+    width: 1.7rem;
+    height: 3rem;
+}
+.tree-nested .element:last-child::after {
+    display: none;
+}
+.card-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    margin: 1rem 1rem;
+    flex-direction: column;
+    background-color: var(--background-color-2);
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20rem;
+    position: relative;
+    border-radius: 1rem;
+    transition: .3s ease-in-out;
+    min-width: 18rem;
+    max-width: 24rem;
+}
+.card:hover {
+    background-color: var(--highlight-color);
+    transform: translateY(-0.3rem);
+}
+.card .title {
+    margin-top: 2.3rem;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    text-align: center;
+}
+.card .subtitle {
+    margin-top: -10px;
+    z-index: 3;
+}
+.card .description {
+    text-align: center;
+    margin: 0 1.5rem;
+}
+.card .link {
+    margin-top: 1.3rem;
+}
+.card .link:hover {
+    color: var(--third-color);
+}
+.notice-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.notice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 6rem;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+    margin: 0.5rem 3rem;
+    background-color: var(--background-color-2);
+}
+.notice img {
+    flex-basis: 10%;
+    width: 10%;
+    border-radius: 15px;
+    margin-left: 1rem;
+}
+.notice .description {
+    flex-basis: 85%;
+    padding-left: 1.5rem;
+}
+.icon {
+    margin: auto 0.5rem;
+}
+.button {
+    text-align: center;
+    background-color: var(--background-color);
+    border: 1px solid var(--second-color);
+    color: var(--main-color);
+    font-size: large;
+    cursor: pointer;
+    padding: .65rem 1rem;
+    border-radius: 1rem;
+    transition: ease-in-out 0.3s;
+}
+.button:hover {
+    background-color: var(--highlight-color);
+}
+.hidden {
+    display: none;
+}
+.not-hidden {
+    display: block;
+}

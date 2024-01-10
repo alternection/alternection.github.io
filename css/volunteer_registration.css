@@ -1,0 +1,144 @@
+@import url(main.css);
+@import url(utilities.css);
+
+#content-title {
+    align-items: center;
+    text-align: center;
+    letter-spacing: 5pt;
+}
+#form {
+    margin-top: 4rem;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    position: relative;
+}
+#form .subtitle {
+    padding-left: 1rem;
+    padding-bottom: 2px;
+    letter-spacing: 3px;
+    margin-top: 2rem;
+}
+#form .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    left: 75%;
+    position: absolute;
+    margin: 3.5rem 0;
+}
+#form span {
+    color: var(--third-color);
+    opacity: 70%;
+}
+#form-name-area {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+#form-name-area input {
+    flex-basis: 49%;
+}
+#form-social-contact-area input {
+    flex-basis: 100%;
+}
+#form-contact-area {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+#form-contact-area input {
+    flex-basis: 49%;
+}
+#form-social-contact-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+#form-social-contact-area input {
+    padding: 10px;
+    flex-basis: 49%;
+    margin: 7px 0;
+}
+#form-field-orhter-social-media {
+    flex-basis: 100%;
+    margin: 7px 0;
+}
+#form-identical-information {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+}
+#form-identical-information input {
+    flex-basis: 100%;
+    margin: 7px 0;
+}
+#form-personal-information {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+#form-personal-information div {
+    margin: 10px;
+}
+#form-personal-information div label {
+    font-size: large;
+    color: var(--fifth-color);
+}
+#form-personal-information textarea {
+    flex-basis: 100%;
+}
+#blood-group select{
+    background-color: var(--background-color-3);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: var(--main-color);
+    font-size: large;
+}
+#hobby {
+    flex-basis: 100%;
+    margin: 1rem 0;
+}
+#agree-to-t-and-c {
+    display: inline;
+    margin-top: 2.5rem;
+}
+#agree-to-t-and-c {
+    margin: 1rem;
+}
+#agree-to-t-and-c > *{
+    display: inline-block;
+    text-wrap: wrap;
+    color: var(--second-color);
+    font-size: large;
+    opacity: 1;
+    margin-top: 1.5rem;
+}
+#agree-checkbox-first-text {
+    margin-left: 0.5rem;
+}
+#agree-to-t-and-c details {
+    transition: 0.4s ease-in-out;
+}
+#agree-to-t-and-c details .tree-root {
+    transition: 0.4s ease-in-out;
+}
+#agree-to-t-and-c details[open]{
+    margin: 0 1rem; 
+}
+#click-msg {
+    color: var(--highlight-color);
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1pt;
+    font-size: large;
+    transition: 0.3s ease-in-out;
+}

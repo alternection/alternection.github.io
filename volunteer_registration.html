@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternection</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/86bb132a62.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/volunteer_registration.css">
+  <script src="JS/volunteer_registration.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+          <nav>
+            <a href="index.html"><img src="images/logo.svg" alt="The logo of Alternection" class="logo"></a>
+            <ul>
+              <li><a href="index.html" class="link">Home</a></li>
+              <li><a href="#" class="link">About</a></li>
+              <li><a href="#" class="link">Contact</a></li>
+              <li><a href="services.html" class="link">Services</a></li>
+              <li><a href="#" class="link">Board</a></li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+    <h1 id="content-title" class="title">Join Alternection as a volunteer now</h1>
+    <div class="container" id="form">
+        <!-- method="POST" action="https://script.google.com/macros/s/AKfycbzgZeh-IZd-vF9EpD1rBoUYta-TsteRzKfg-UWOJVsDehnZy14IwnIq3M2arL0kkeF3/exec" -->
+        <form name="VolunteerRegistrationForm" onsubmit="return checkForm(this)" id="volunteerForm">
+            <p class="subtitle">Naming Information</p>
+            <div id="form-name-area">
+                <input type="text" name="First Name" placeholder="First Name" required>
+                <input type="text" name="Last Name" placeholder="Last Name" required>
+            </div>
+            <p class="subtitle">Contact Information</p>
+            <div id="form-contact-area">
+                <input type="email" name="Email Address" placeholder="Email Address" required>
+                <input type="text" name="Phone Number" placeholder="Phone No." required>
+            </div>
+            <p class="subtitle">Social Contact Information (put a <span>#</span> if not applicable)</p>
+            <div id="form-social-contact-area">
+                <input type="text" name="Facebook Account" placeholder="Facebook Account Link" required>
+                <input type="text" name="Instagram Account" placeholder="Instagram Account Link" required>
+                <input type="text" name="Twitter Account" placeholder="Twitter Account Link" required>
+                <input type="text" name="Linked Account" placeholder="Linked Account Link" required>
+                <input type="text" name="Whatsapp Number" placeholder="Whatsapp No." required>
+                <textarea name="Other Social Media" id="form-field-orhter-social-media" rows="3" placeholder="Other Social Media Account Links"></textarea>
+            </div>
+            <p class="subtitle">Identical Information</p>
+            <div id="form-identical-information">
+                <input type="text" name="Educational Institute" placeholder="Educational Institute" required>
+                <input type="text" name="Parmanent Address" placeholder="Parmanent Address" required>
+                <input type="text" name="Present Address" placeholder="Present Address" required>
+            </div>
+            <p class="subtitle">Personal Information</p>
+            <div id="form-personal-information">
+                <div id="date-of-birth">
+                    <label for="Date of Birth">Date of Birth</label>
+                    <input type="date" name="Date of Birth" required>
+                </div>
+                <div id="blood-group">
+                    <label for="Blood Group">Blood Group</label>
+                    <select name="Blood Group">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <input type="text" name="Hobby" id="hobby" placeholder="How about mentioning your hobby ?" required>
+                <textarea name="Experiences" rows="3" placeholder="Hey, do you have any previous experiences ? If yea, describe please. leave it if you don't have."></textarea>
+            </div>
+            <div id="agree-to-t-and-c">
+                <input type="checkbox" required name="AgreeToTermsAndConditions">
+                <p id="agree-checkbox-first-text" aria-required="true">I acknowledge that I have read and understood agree to be bound by the</p>
+                <details>
+                    <summary><span>Duties and responsibilities as a volunteer</span></summary>
+                    <ul class="tree-root">
+                        <li class="element">
+                            <ul class="tree-nested">
+                                <li class="element">It's a complete volunteering work, no payment is described for the tasks.</li>
+                                <li class="element">Every volunteers should pay at least 4 (four) hours for their own study so that they can provide us with the contents.</li>
+                                <li class="element">Volunteers should share Alternection's social media posts</li>
+                                <li class="element">The should be bounded with the deadlines and the process of giving the contents.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <button type="submit" class="button">Submit Data</button>
+        </form>
+    </div>
+    <div class="container">
+        <p id="click-msg" class="hidden">Your Data is being sent, wait until the page is reloaded.</p>
+    </div>
+</body>
+</html>
