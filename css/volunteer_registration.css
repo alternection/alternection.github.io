@@ -1,10 +1,13 @@
 @import url(main.css);
 @import url(utilities.css);
 
+/* ---------main page css -------------- */
 #content-title {
     align-items: center;
     text-align: center;
     letter-spacing: 5pt;
+    text-wrap: wrap;
+    padding: 0 13%;
 }
 #form {
     margin-top: 4rem;
@@ -25,11 +28,10 @@
     justify-content: flex-end;
     left: 75%;
     position: absolute;
-    margin: 3.5rem 0;
+    margin: 5vh 0;
 }
 #form span {
     color: var(--third-color);
-    opacity: 70%;
 }
 #form-name-area {
     display: flex;
@@ -39,9 +41,6 @@
 }
 #form-name-area input {
     flex-basis: 49%;
-}
-#form-social-contact-area input {
-    flex-basis: 100%;
 }
 #form-contact-area {
     display: flex;
@@ -97,11 +96,14 @@
 }
 #blood-group select{
     background-color: var(--background-color-3);
-    padding: 10px;
+    padding: 5px 7px;
     border-radius: 10px;
     border: none;
     color: var(--main-color);
     font-size: large;
+}
+#date-of-birth input[type='date'] {
+    padding: 5px 7px;
 }
 #hobby {
     flex-basis: 100%;
@@ -113,20 +115,22 @@
 }
 #agree-to-t-and-c {
     margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
-#agree-to-t-and-c > *{
+#agree-to-t-and-c {
     display: inline-block;
     text-wrap: wrap;
     color: var(--second-color);
     font-size: large;
-    opacity: 1;
-    margin-top: 1.5rem;
 }
-#agree-checkbox-first-text {
-    margin-left: 0.5rem;
+#agree-checkbox-label {
+    margin-left: 0.1rem;
 }
 #agree-to-t-and-c details {
     transition: 0.4s ease-in-out;
+    display: inline;
 }
 #agree-to-t-and-c details .tree-root {
     transition: 0.4s ease-in-out;
@@ -141,4 +145,54 @@
     letter-spacing: 1pt;
     font-size: large;
     transition: 0.3s ease-in-out;
+}
+
+/* -------- resopnsive css --------- */
+@media only screen and (max-width : 865px) {
+    #form-social-contact-area input {
+        flex-basis: 100%;
+    }
+    #content-title {
+        letter-spacing: 3pt;
+    }
+}
+@media only screen and (max-width : 775px) {
+    #content-title {
+        font-size: 14pt;
+    }
+    #form-name-area input, #form-contact-area input {
+        flex-basis: 100%;
+        margin: 7px 0;
+    }
+    #form .button {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width : 750px) {
+    #content-title {
+        font-size: 14pt;
+    }
+    #agree-checkbox-label,
+    #form input,
+    #form textarea,
+    #form-personal-information div label,
+    #blood-group select,
+    #date-of-birth input[type='date'] {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width : 600px) {
+    #content-title {
+        letter-spacing: 2pt;
+    }
+    #agree-to-t-and-c details .tree-root .tree-nested {
+        margin-top: 0rem;
+    }
+    #agree-to-t-and-c details .tree-root .tree-nested .element {
+        font-size: 14px;
+        margin-bottom: 0.25rem;
+    }
+    #agree-to-t-and-c details .element:last-child:before {
+        height: 13px;
+    }
 }

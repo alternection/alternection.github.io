@@ -11,13 +11,15 @@
   <script src="https://kit.fontawesome.com/86bb132a62.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/volunteer_registration.css">
   <script src="JS/volunteer_registration.js"></script>
+  <script src="JS/main.js"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
           <nav>
             <a href="index.html"><img src="images/logo.svg" alt="The logo of Alternection" class="logo"></a>
-            <ul>
+            <i class="fa-solid fa-bars" onclick="ShowHideMenu ()"></i>
+            <ul id="menu-list">
               <li><a href="index.html" class="link">Home</a></li>
               <li><a href="#" class="link">About</a></li>
               <li><a href="#" class="link">Contact</a></li>
@@ -53,18 +55,18 @@
             <p class="subtitle">Identical Information</p>
             <div id="form-identical-information">
                 <input type="text" name="Educational Institute" placeholder="Educational Institute" required>
-                <input type="text" name="Parmanent Address" placeholder="Parmanent Address" required>
-                <input type="text" name="Present Address" placeholder="Present Address" required>
+                <input type="text" name="Parmanent Address" placeholder="Parmanent Address" id="form-parmanent-address" required>
+                <input type="text" name="Present Address" placeholder="Present Address" id="form-present-address" required>
             </div>
             <p class="subtitle">Personal Information</p>
             <div id="form-personal-information">
                 <div id="date-of-birth">
-                    <label for="Date of Birth">Date of Birth</label>
-                    <input type="date" name="Date of Birth" required>
+                    <label for="form-date-of-birth">Date of Birth</label>
+                    <input type="date" name="Date of Birth" id="form-date-of-birth" required>
                 </div>
                 <div id="blood-group">
-                    <label for="Blood Group">Blood Group</label>
-                    <select name="Blood Group">
+                    <label for="form-blood-group">Blood Group</label>
+                    <select id="form-blood-group" name="Blood Group">
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>
                         <option value="B+">B+</option>
@@ -79,21 +81,23 @@
                 <textarea name="Experiences" rows="3" placeholder="Hey, do you have any previous experiences ? If yea, describe please. leave it if you don't have."></textarea>
             </div>
             <div id="agree-to-t-and-c">
-                <input type="checkbox" required name="AgreeToTermsAndConditions">
-                <p id="agree-checkbox-first-text" aria-required="true">I acknowledge that I have read and understood agree to be bound by the</p>
-                <details>
-                    <summary><span>Duties and responsibilities as a volunteer</span></summary>
-                    <ul class="tree-root">
-                        <li class="element">
-                            <ul class="tree-nested">
-                                <li class="element">It's a complete volunteering work, no payment is described for the tasks.</li>
-                                <li class="element">Every volunteers should pay at least 4 (four) hours for their own study so that they can provide us with the contents.</li>
-                                <li class="element">Volunteers should share Alternection's social media posts</li>
-                                <li class="element">The should be bounded with the deadlines and the process of giving the contents.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </details>
+                <input type="checkbox" required name="AgreeToTermsAndConditions" id="agree-to-t-and-c-checkbox">
+                <label for="agree-to-t-and-c-checkbox" id="agree-checkbox-label" aria-required="true">
+                    I acknowledge that I have read and understood agree to be bound by the
+                    <details>
+                        <summary><span>Duties and responsibilities as a volunteer</span></summary>
+                        <ul class="tree-root">
+                            <li class="element">
+                                <ul class="tree-nested">
+                                    <li class="element">It's a complete volunteering work, no payment is described for the tasks.</li>
+                                    <li class="element">Every volunteers should pay at least 4 (four) hours for their own study so that they can provide us with the contents.</li>
+                                    <li class="element">Volunteers should share Alternection's social media posts</li>
+                                    <li class="element">The should be bounded with the deadlines and the process of giving the contents.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                </label>
             </div>
             <button type="submit" class="button">Submit Data</button>
         </form>

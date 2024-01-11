@@ -1,6 +1,5 @@
 @import url(utilities.css);
 
-
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +13,7 @@ body {
     width: 100%;
     background-position: center;
     background-size: cover;
+    color: var(--main-color);
 }
 nav {
     display: flex;
@@ -21,15 +21,17 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-nav ul {
+#menu-list {
     list-style: none;
+    display: block;
+    transition: ease-in-out 0.3s;
 }
-nav ul li{
+#menu-list li{
     display: inline-block;
     padding: 0 1rem;
     transition: .2s ease-in-out;
 }
-nav ul li:hover {
+#menu-list li:hover {
     transform: translateY(-1px);
 }
 summary::-webkit-details-marker {
@@ -151,3 +153,42 @@ input[type=checkbox] {
 #copyright-area .link:hover {
     color: var(--highlight-color);
 }
+
+/* ---------- resopnsive css ---------- */
+@media only screen and (max-width:870px) {
+    #menu-list {
+        background-color: var(--fourth-color);
+        flex-basis: 100%;
+        padding: 1rem;
+        margin-top: 1.2rem;
+        border-radius: 0.5rem;
+        display: none;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    }
+    #menu-list li {
+        margin: 0.5rem auto;
+        display: block;
+    }
+}
+@media only screen and (max-width : 600px) {
+    #header h1 {
+        font-size: 36px;
+    }
+    #header h3 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    #notices .container .subtitle {
+        font-size: x-large;
+        font-style: oblique;
+        letter-spacing: 1pt;
+        
+    }
+    #copyright-area > * {
+        font-size: small;
+    }
+    form input, form textarea {
+        font-size: 12pt;
+    }
+}
+

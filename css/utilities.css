@@ -56,10 +56,9 @@
     list-style: none;
     position: relative;
     font-size: large;
-    line-height: 2rem;
 }
 .tree-nested {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     margin-left: 3.4rem;
     list-style: none;
     color: var(--main-color);
@@ -77,25 +76,25 @@
 .tree-nested .element::before {
     position: absolute;
     left: -2rem;
-    top: -2rem;
-    border-left: 2px solid var(--third-color);
-    border-bottom: 2px solid var(--third-color);
+    top: -0.5rem;
+    border-left: 1px solid var(--third-color);
     content: '';
     width: 1.7rem;
-    height: 3rem;
+    height: 100%;
 }
 .tree-nested .element::after {
     position: absolute;
     left: -2rem;
-    bottom: -0.8rem;
-    border-left: 2px solid var(--third-color);
+    bottom: -0.6rem;
+    border-top: 1px solid var(--third-color);
     content: '';
     width: 1.7rem;
-    height: 3rem;
+    height: 100%;
 }
-.tree-nested .element:last-child::after {
-    display: none;
+.tree-nested .element:last-child::before {
+    height: 13pt;
 }
+
 .card-holder {
     display: flex;
     align-items: center;
@@ -159,13 +158,14 @@
     background-color: var(--background-color-2);
 }
 .notice img {
-    flex-basis: 10%;
+    flex-basis: 15%;
     width: 10%;
-    border-radius: 15px;
+    border-radius: 2rem;
     margin-left: 1rem;
+    padding: 1rem 0;
 }
 .notice .description {
-    flex-basis: 85%;
+    flex-basis: 80%;
     padding-left: 1.5rem;
 }
 .icon {
@@ -190,4 +190,70 @@
 }
 .not-hidden {
     display: block;
+}
+
+/* --------- css for fontawesome icons ------- */
+.fa-solid.fa-bars {
+    display: none;
+    color: var(--main-color);
+}
+
+/* ----------- responsive css --------- */
+@media only screen and (max-width : 870px) {
+    .fa-solid.fa-bars {
+        display: block;
+    }
+}
+@media only screen and (max-width : 675px) {
+    .tree-root {
+        font-size: 14pt;
+        padding: 0;
+        margin: 0;
+    }
+    .tree-nested {
+        font-size: 11.5pt;
+    }
+    .tree-root span {
+        font-size: large;
+    }
+}
+@media only screen and (max-width : 600px) {
+    .desctiption {
+        font-size: large;
+    }
+    .notice {
+        margin: 0.5rem 1.5rem;
+    }
+    .notice .description {
+        font-size: 14px;
+        flex-basis: 100%;
+        padding: 1rem;
+    }
+    .notice img {
+        height: 80%;
+        width: 80%;
+        flex-basis: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width : 400px) {
+    .tree-root > *{
+        font-size: 10pt;
+        padding: 0;
+        margin: 0;
+    }
+    .tree-nested {
+        font-size: 11pt;
+        margin-left: 2.5rem;
+    }
+    .description {
+        font-size: 10pt;
+    }
+    .title {
+        font-size: large;
+    }
+    .subtitle {
+        font-size: small;
+    }
 }
